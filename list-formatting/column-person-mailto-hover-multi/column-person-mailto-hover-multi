@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "children": [
+    {
+      "elmType": "div",
+      "children": [
+        {
+          "forEach": "personIterator in @currentField",
+          "elmType": "div",
+          "style": {
+            "padding": "5px 0px"
+          },
+          "children": [
+            {
+              "elmType": "span",
+              "txtContent": "[$personIterator.title]",
+              "defaultHoverField": "[$personIterator]"
+            },
+            {
+              "elmType": "a",
+              "style": {
+                "text-decoration": "none",
+                "vertical-align": "middle"
+              },
+              "attributes": {
+                "iconName": "Mail",
+                "class": "ms-fontColor-themePrimary sp-field-quickAction",
+                "href": "='mailto:' + [$personIterator.email]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
