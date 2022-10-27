@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "a",
+  "attributes": {
+    "href": {
+      "operator": "+",
+      "operands": [
+        "mailto:",
+        "[$Contact.email]" # change $Contact to the name of the column
+      ]
+    },
+    "target": "_blank",
+    "class": "ms-fontColor-themePrimary ms-fontColor-themeDark--hover sp-field-quickActions"
+  },
+  "style": {
+    "border": "none",
+    "background-color": "transparent",
+    "cursor": "pointer",
+    "text-decoration": "none",
+    "outline": "none"
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "attributes": {
+        "iconName": "Mail",
+        "class": "ms-font-xxl"
+      }
+    }
+  ]
+}
